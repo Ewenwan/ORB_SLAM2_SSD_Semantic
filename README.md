@@ -1,3 +1,16 @@
+# 修改 
+    添加一个点云建图线程，接收来自 Tracking线程的关键帧。
+    使用 彩色图和深度图 生成点云
+    对关键帧 的 彩色图 使用 mobilenetv2-ssd-lite 进行目标检测。
+    对每个目标区域 的点云计算 点云中心 3D包围框信息 ( 会使用深度均值进行滤波)。
+    加入到 语义目标数据库中。
+    当 是相同的类别且位置中心没有太大的变化，则认为是同一个物体，融合相关信息。
+    
+# 待改进 
+    1. 考虑动态环境(语义信息、多视角几何、光流、运动一致性检测)
+    2. 动态更新 语义地图 (语义信息 加入到 数据关联 损失函数中、octo-map语义地图概率更新语义和动态特性)
+
+
 # ORB-SLAM2
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
 
