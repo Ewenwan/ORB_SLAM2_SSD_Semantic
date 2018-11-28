@@ -8,10 +8,13 @@
     加入到 语义目标数据库中。
     当 是相同的类别且位置中心没有太大的变化，则认为是同一个物体，融合相关信息。
     
-# 待改进 
+# 改进 
     1. 考虑动态环境(语义信息、多视角几何、光流、运动一致性检测)
     2. 动态更新 语义地图 (语义信息 加入到 数据关联 损失函数中、octo-map语义地图概率更新语义和动态特性)
 
+# 待改进
+    将 语义数据库信息 加入到 octo-map 中
+    使用  octo-map的概率信息 更新语义数据库
 
 # ORB-SLAM2
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
