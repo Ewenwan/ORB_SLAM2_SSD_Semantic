@@ -8,7 +8,11 @@
     加入到 语义目标数据库中。
     当 是相同的类别且位置中心没有太大的变化，则认为是同一个物体，融合相关信息。
     
-# 改进 
+[mobilenetv2-ssd-lite 目标检测](https://github.com/Ewenwan/MVision/tree/master/CNN/HighPerformanceComputing/example)
+
+[图漾相机](https://github.com/Ewenwan/MVision/tree/master/stereo/RGBD/orb_slam2_rgbd)
+    
+# 改进点
     1. 考虑动态环境(语义信息、多视角几何、光流、运动一致性检测)
     2. 动态更新 语义地图 (语义信息 加入到 数据关联 损失函数中、octo-map语义地图概率更新语义和动态特性)
 
