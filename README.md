@@ -19,9 +19,21 @@
     2. 动态更新 语义地图 (语义信息 加入到 数据关联 损失函数中、octo-map语义地图概率更新语义和动态特性)
     3. orbslam2地图 与 octomap地图的 保存与载入
 
-# 待改进
+# 改进
     将 语义数据库信息 加入到 octo-map 中
     使用  octo-map的概率信息 更新语义数据库
+
+# 最终效果图
+![]()
+
+
+
+
+# 遗留问题
+    
+    目标检出率低(更好的目标检测/实例分割模型、地图点和语义信息化挂钩，将语义信息加入到数据关联目标函数中)
+    octomap的动态地图更新效果不太理想(octomap 概率更新探索，建图时直接剔除动态点)
+    地图大了之后，系统 响应变慢 (地图维护)
 
 # ORB-SLAM2
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
