@@ -24,9 +24,14 @@
     使用  octo-map的概率信息 更新语义数据库
 
 # 最终效果图
-![]()
 
+> octomsp地图：
 
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/final_map.png)
+
+> ORB-SLAM2地图切换
+
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/orb-slam2MAP.png)
 
 
 # 遗留问题
@@ -34,7 +39,12 @@
     目标检出率低(更好的目标检测/实例分割模型、地图点和语义信息化挂钩，将语义信息加入到数据关联目标函数中)
     octomap的动态地图更新效果不太理想(octomap 概率更新探索，建图时直接剔除动态点)
     地图大了之后，系统 响应变慢 (地图维护)
-
+    
+    地图导航、路径规划
+    智能导航
+     
+     
+     
 # ORB-SLAM2
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
 
