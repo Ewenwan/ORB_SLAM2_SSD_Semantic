@@ -33,6 +33,12 @@
 
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/orb-slam2MAP.png)
 
+> 语义pcl点云图
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/global.png)
+
+
+
+
 
 # 遗留问题
     
