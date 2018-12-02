@@ -66,7 +66,40 @@
     地图导航、路径规划
     智能导航
      
-     
+
+# 语义数据关联
+
+    路标点集合        L = {Lm} m=[1:M]   
+    传感器姿态序列    X = {xt} t=[1:T]
+    传感器测量值      Z = {zk} k=[1:K]
+
+    数据关联        D = {(ak, bk)} k=[1:K]
+                  意义是 地zk次测量下 姿态 x_ak 和 路标点 L_bk 相关联
+                  
+    统计学方法,已知数据 Z，求出现Z的最大概率对应的系统参数 L,X,D========        
+    普通硬决策方法：(特征点法====)
+                  先求得一个准确的 关联D'    D' <---arg max  log  p(D|X0,L0,Z)
+                  
+                  使用先验的 位姿X0(orb-slam2中运动模型得到) 和 
+                  已经存在的地图点L0 以及传感器观测信息Z
+                  求解一个最大概率的 2D-3D点数据关联 / 3D-3D点数据关联
+                   
+                  取对数，仍然是正相关，[0，1] ---->映射到 [-无穷大,0]
+                  在使用这个关联D  来最大化 模型(X,L,D)出现数据Z的概率，
+                  得到最优 的 X，L
+                  X，L <------ arg max p(Z|X,L,D')
+                  
+                  通过最小化 数据关联误差(即最大化观测成立概率)，优化位姿X 和 地图点L
+                  
+    软决策，考虑不确定性：(类似直接法，不需要准确的数据关联)
+                  关联D 是由多种状态 叠加而成，是一个叠加状态，薛定鄂的猫===^===^===
+                  首先考虑所有 可能的 数据关联 D 
+                         计算其数据分布 获得每一种关联zk (Xak, Lbk) 对应的概率 wij
+                         位姿Xak下，测量值 zk 关联 地图点 Lbk
+                  在多种数据关联下 最大化
+                          X，L <------ arg max sum(sum( wij * log p(zk|ak, bk)))
+
+
      
 # ORB-SLAM2
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
