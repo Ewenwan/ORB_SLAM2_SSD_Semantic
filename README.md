@@ -67,7 +67,7 @@
     智能导航
      
 
-# 语义数据关联
+#  数据关联
 
     路标点集合        L = {Lm} m=[1:M]   
     传感器姿态序列    X = {xt} t=[1:T]
@@ -99,7 +99,23 @@
                   在多种数据关联下 最大化
                           X，L <------ arg max sum(sum( wij * log p(zk|ak, bk)))
 
-
+    地图点属于每种类类别的概率分布
+    
+    
+#  语义误差计入到目标函数
+    
+    常规 损失函数: 光度误差(photometric error, 直接法，光度不变，数据关联点，灰度误差)
+                  几何误差(geometric error,   特征点法，重投影位置误差)
+    语义误差：
+                  语义分割观测 Sk
+                  地图点 P 3d坐标、属于每种类别的概率(Wic),主要用于误差加权
+                  p(Sk| 相机位姿Tk, 地图点位置Xi, 对应2d投影点类别)
+                  
+                  
+                  一个语义分割Sk ----> n 个 不同类别的 0-1 mask
+                                      属于 当前类的为1，其它类为0
+                  
+                  2D像素点 -----> 1D 具体类别 距离函数
      
 # ORB-SLAM2
 **Authors:** [Raul Mur-Artal](http://webdiis.unizar.es/~raulmur/), [Juan D. Tardos](http://webdiis.unizar.es/~jdtardos/), [J. M. M. Montiel](http://webdiis.unizar.es/~josemari/) and [Dorian Galvez-Lopez](http://doriangalvez.com/) ([DBoW2](https://github.com/dorian3d/DBoW2))
