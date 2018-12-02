@@ -42,7 +42,7 @@
 
 # 最终效果图
 
-> octomsp地图：
+> octomap地图：
 
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/final_map.png)
 
