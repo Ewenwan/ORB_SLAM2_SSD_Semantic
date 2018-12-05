@@ -19,6 +19,8 @@
 
 [Octomap建图参考2](https://github.com/Ewenwan/octomap_mapping)
 
+[DynamicSemanticMapping 动态场景建图](https://github.com/Ewenwan/DynamicSemanticMapping)
+
 > 动态环境处理
 
 []() 
