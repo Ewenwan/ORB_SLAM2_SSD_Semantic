@@ -38,7 +38,8 @@
            https://github.com/Ewenwan/MVision/tree/master/stereo/RGBD/orb_slam2_rgbd
     3. oRB_SLAM2
            https://github.com/Ewenwan/MVision/tree/master/vSLAM/oRB_SLAM2
-
+    4. Octomap建图参考
+           https://github.com/Ewenwan/ORB-SLAM-RGBD-with-Octomap
 
 
 
