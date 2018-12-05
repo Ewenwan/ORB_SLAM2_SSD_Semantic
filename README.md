@@ -17,6 +17,8 @@
 
 [Octomap建图参考](https://github.com/Ewenwan/ORB-SLAM-RGBD-with-Octomap)
 
+[Octomap建图参考2](https://github.com/Ewenwan/octomap_mapping)
+
 > 动态环境处理
 
 []() 
