@@ -2,7 +2,9 @@
 # -*- coding:utf-8 -*-
 
 # RGB和深图像时间戳对齐
+# 再和 groundtruth 相机轨迹对齐
 # 用法 python2 associate.py rgb.txt depth.txt > associate.txt
+# python associate.py associate.txt groundtruth.txt > associate_with_groundtruth.txt
 
 # Software License Agreement (BSD License)
 #
