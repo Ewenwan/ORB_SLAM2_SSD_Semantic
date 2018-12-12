@@ -229,6 +229,8 @@ This will create **libORB_SLAM2.so**  at *lib* folder and the executables **mono
 ./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt Examples/Monocular/TUMX.yaml PATH_TO_SEQUENCE_FOLDER
 ```
 
+    ewenwan@ewenwan-Lenovo-G480:~/ewenwan/project/ORB_SLAM2-master/Examples/RGB-D$ ./rgbd_tum ../../Vocabulary/ORBvoc.txt ./TUM3.yaml ../../../../data/f3_walking_xyz/ ../../../../data/f3_walking_xyz/associate.txt
+
 ## KITTI Dataset  
 
 1. Download the dataset (grayscale images) from http://www.cvlibs.net/datasets/kitti/eval_odometry.php 
