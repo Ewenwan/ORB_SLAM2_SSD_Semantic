@@ -1,4 +1,6 @@
 #!/usr/bin/python
+# -*- coding:utf-8 -*-
+# RGB和深图像时间戳对齐
 # Software License Agreement (BSD License)
 #
 # Copyright (c) 2013, Juergen Sturm, TUM
@@ -35,9 +37,14 @@
 # sudo apt-get install python-argparse
 
 """
-The Kinect provides the color and depth images in an un-synchronized way. This means that the set of time stamps from the color images do not intersect with those of the depth images. Therefore, we need some way of associating color images to depth images.
+The Kinect provides the color and depth images in an un-synchronized way. 
+This means that the set of time stamps from the color images do not intersect with those of the depth images. 
+Therefore, we need some way of associating color images to depth images.
 
-For this purpose, you can use the ''associate.py'' script. It reads the time stamps from the rgb.txt file and the depth.txt file, and joins them by finding the best matches.
+For this purpose, you can use the ''associate.py'' script. 
+It reads the time stamps from the rgb.txt file and the depth.txt file, 
+and joins them by finding the best matches.
+
 """
 
 import argparse
@@ -45,7 +52,7 @@ import sys
 import os
 import numpy
 
-
+# 读取轨迹文件=================
 def read_file_list(filename):
     """
     Reads a trajectory from a text file. 
@@ -112,7 +119,8 @@ if __name__ == '__main__':
     parser.add_argument('--offset', help='time offset added to the timestamps of the second file (default: 0.0)',default=0.0)
     parser.add_argument('--max_difference', help='maximally allowed time difference for matching entries (default: 0.02)',default=0.02)
     args = parser.parse_args()
-
+    
+    # 读取文件
     first_list = read_file_list(args.first_file)
     second_list = read_file_list(args.second_file)
 
