@@ -1,6 +1,9 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+
 # RGB和深图像时间戳对齐
+# 用法 python2 associate.py rgb.txt depth.txt > associate.txt
+
 # Software License Agreement (BSD License)
 #
 # Copyright (c) 2013, Juergen Sturm, TUM
