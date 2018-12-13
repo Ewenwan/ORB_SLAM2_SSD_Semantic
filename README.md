@@ -64,18 +64,18 @@
 > 2d 融合3d效果图
 
 方案1:
-![]()
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/mergeDepth.png)
 
 方案2:
-![]()
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/mergeSg.png)
 
 > 动态点检测
 
 方案1:
-![]()
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/dynamic_det_geom.png)
 
 方案2:
-![]()
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/dynamic_det_flow.png)
 
 
 # 遗留问题
