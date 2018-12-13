@@ -78,6 +78,12 @@
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/dynamic_det_flow.png)
 
 
+相机定位轨迹对比， tum ft3 walking数据集上
+
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/trajectory.png)
+
+
+
 # 遗留问题
     
     目标检出率低(更好的目标检测/实例分割模型、地图点和语义信息化挂钩，将语义信息加入到数据关联目标函数中)
