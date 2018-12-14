@@ -1,4 +1,4 @@
-![](octo-flow.png)
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/global.png)
 
 # 修改 
     添加一个点云建图线程，接收来自 Tracking线程的关键帧。
@@ -53,6 +53,8 @@
 
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/final_map.png)
 
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/global2.png)
+
 > ORB-SLAM2地图切换
 
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/orb-slam2MAP.png)
@@ -68,6 +70,8 @@
 
 方案2:
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/mergeSg.png)
+
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/mergeSG_PERSON_CHAIR.png)
 
 > 动态点检测
 
