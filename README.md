@@ -1,12 +1,25 @@
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/global.png)
 
 # 修改 
-    添加一个点云建图线程，接收来自 Tracking线程的关键帧。
-    使用 彩色图和深度图 生成点云
-    对关键帧 的 彩色图 使用 mobilenetv2-ssd-lite 进行目标检测。
-    对每个目标区域 的点云计算 点云中心 3D包围框信息 ( 会使用深度均值进行滤波)。(方案2，点云分割聚类后和2d框计算交并比)
-    加入到 语义目标数据库中。
-    当 是相同的类别且位置中心没有太大的变化，则认为是同一个物体，融合相关信息。
+    1.0
+     添加一个点云建图线程，接收来自 Tracking线程的关键帧。
+     使用 彩色图和深度图 生成点云
+     对关键帧 的 彩色图 使用 mobilenetv2-ssd-lite 进行目标检测。
+     对每个目标区域 的点云计算 点云中心 3D包围框信息 ( 会使用深度均值进行滤波)。(方案2，点云分割聚类后和2d框计算交并比)
+     加入到 语义目标数据库中。
+     当 是相同的类别且位置中心没有太大的变化，则认为是同一个物体，融合相关信息。
+     
+    2.0
+     对关键点使用 动点检测算法进行过滤
+     在原地图构建类中 加入 octomap地图构建部分
+     其次对关键帧使用新的 目标检测线程进行 检测
+     在构建octomap地图的同时构建语义目标数据库
+     保持和载入 orb-slam2地图和octomap地图
+     
+    3.0
+     想法:  使用语义分割/实例分割 构建更精细的 语义目标数据库
+           使用 目标检测结果和 动点检测算法对 关键点进行 过滤
+           建图时 除去 动点 和 检测结果中的先验动点
     
 # 参考
 [mobilenetv2-ssd-lite 目标检测](https://github.com/Ewenwan/MVision/tree/master/CNN/HighPerformanceComputing/example)
@@ -25,14 +38,19 @@
 
 []() 
 [dynslam 光流运动  语义分割](http://www.cvlibs.net/publications/Barsan2018ICRA.pdf) 
+
 [DynaSLAM 多视角几何 语义分割](https://arxiv.org/pdf/1806.05620.pdf) 
+
 [光流运动一致性检测，投影点距离基线距离阈值 语义分割 DS-SLAM ](https://arxiv.org/ftp/arxiv/papers/1809/1809.08379.pdf) 
+
 [相机运动 与 像素点运动比较 阈值](http://sci-hub.tw/https://linkinghub.elsevier.com/retrieve/pii/S0167865518308523) 
 
 > 语义信息融合
 
 [Towards Semantic SLAM using a Monocular Camera ](http://webdiis.unizar.es/~jcivera/papers/civera_etal_iros11.pdf) 
+
 [Probabilistic Data Association for Semantic SLAM](https://www.cis.upenn.edu/~kostas/mypub.dir/bowman17icra.pdf) 
+
 [VSO: Visual Semantic Odometry](https://demuc.de/papers/lianos2018vso.pdf) 
 []() 
 
