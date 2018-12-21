@@ -12,6 +12,8 @@
     cd ../Examples/RGB-D/
 	
     ./ty_rgbd ../../Vocabulary/ORBvoc.bin ./my_rgbd_ty_api_adj.yaml
+    
+    ./rgbd_tum ../../Vocabulary/ORBvoc.bin ./TUM3.yaml ../../../../data/f3_walking_xyz/ ../../../../data/f3_walking_xyz/associate.txt
 
 # octomap地图可视化
 	 octovis octomap.ot
