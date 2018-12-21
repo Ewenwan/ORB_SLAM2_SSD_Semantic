@@ -105,6 +105,33 @@
 
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/trajectory.png)
 
+    flow:
+    compared_pose_pairs 826 pairs
+    absolute_translational_error.rmse 0.387510 m
+    absolute_translational_error.mean 0.316048 m
+    absolute_translational_error.median 0.203472 m
+    absolute_translational_error.std 0.224227 m
+    absolute_translational_error.min 0.070175 m
+    absolute_translational_error.max 1.052806 m
+
+    geom:
+    compared_pose_pairs 826 pairs
+    absolute_translational_error.rmse 0.151517 m
+    absolute_translational_error.mean 0.070537 m
+    absolute_translational_error.median 0.041738 m
+    absolute_translational_error.std 0.134097 m
+    absolute_translational_error.min 0.002700 m
+    absolute_translational_error.max 0.889107 m
+
+
+    src:
+    compared_pose_pairs 826 pairs
+    absolute_translational_error.rmse 0.702233 m
+    absolute_translational_error.mean 0.582247 m
+    absolute_translational_error.median 0.520550 m
+    absolute_translational_error.std 0.392580 m
+    absolute_translational_error.min 0.077351 m
+    absolute_translational_error.max 1.476973 m
 
 
 # 遗留问题
