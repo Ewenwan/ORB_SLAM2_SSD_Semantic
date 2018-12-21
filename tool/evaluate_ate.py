@@ -19,6 +19,59 @@ import numpy
 import argparse
 import associate
 
+# 相似变换误差==
+def align_sim3(model, data):
+    """Implementation of the paper: S. Umeyama, Least-Squares Estimation
+       of Transformation Parameters Between Two Point Patterns,
+       IEEE Trans. Pattern Anal. Mach. Intell., vol. 13, no. 4, 1991.
+       Input:
+           model -- first trajectory (3xn)
+           data -- second trajectory (3xn)
+       Output:
+           s -- scale factor (scalar)
+           R -- rotation matrix (3x3)
+           t -- translation vector (3x1)
+           t_error -- translational error per point (1xn)
+    """
+    # substract mean
+    mu_M = model.mean(0).reshape(model.shape[0],1)
+    mu_D = data.mean(0).reshape(data.shape[0],1)
+    model_zerocentered = model - mu_M
+    data_zerocentered = data - mu_D
+    n = np.shape(model)[0]
+    
+    # correlation
+    C = 1.0/n*np.dot(model_zerocentered.transpose(), data_zerocentered)
+    sigma2 = 1.0/n*np.multiply(data_zerocentered,data_zerocentered).sum()
+    U_svd,D_svd,V_svd = np.linalg.linalg.svd(C)
+    D_svd = np.diag(D_svd)
+    V_svd = np.transpose(V_svd)
+    S = np.eye(3)
+
+    if(np.linalg.det(U_svd)*np.linalg.det(V_svd) < 0):
+    S[2,2] = -1
+
+    R = np.dot(U_svd, np.dot(S, np.transpose(V_svd)))
+    s = 1.0/sigma2*np.trace(np.dot(D_svd, S))
+    t = mu_M-s*np.dot(R,mu_D)
+    # TODO:
+    model_aligned = s * R * model + t
+    alignment_error = model_aligned - data
+    t_error = np.sqrt(np.sum(np.multiply(alignment_error,alignment_error),0)).A[0]
+
+    #return s, R, t #, t_error
+    return s, R, t, t_erro
+
+# 欧式变换误差
+"""
+由于真实轨迹录制时的坐标系和算法一开始的坐标系存在差异，
+所以算法估计的相机轨迹和真实轨迹之间存在一个欧式变换，
+所以按照对估计值和真实值进行配准后，
+需要求解真实值和匹配的估计值之间的一个欧式变换。
+
+对估计值进行变换后再与真实值计算差值。
+
+"""
 def align(model,data):
     """Align two trajectories using the method of Horn (closed-form).
     匹配误差计算====
@@ -50,7 +103,7 @@ def align(model,data):
     
     model_aligned = rot * model + trans
     alignment_error = model_aligned - data
-    
+    # err = sqrt((x-x')^2 + (y-y')^2 + (z-z')^2) 
     trans_error = numpy.sqrt(numpy.sum(numpy.multiply(alignment_error,alignment_error),0)).A[0]
         
     return rot,trans,trans_error
@@ -138,19 +191,22 @@ if __name__=="__main__":
     parser.add_argument('--plot3D', help='plot the first and the aligned second trajectory to as interactive 3D plot (format: png)', action = 'store_true')
     parser.add_argument('--verbose', help='print all evaluation data (otherwise, only the RMSE absolute translational error in meters after alignment will be printed)', action='store_true')
     args = parser.parse_args()
-
+    
+    # 读取数据
     first_list = associate.read_file_list(args.first_file)
     second_list = associate.read_file_list(args.second_file)
-
+    
+    # 按照时间戳进行匹配，最大差值不能超过 max_difference 0.02
+    # 
     matches = associate.associate(first_list, second_list,float(args.offset),float(args.max_difference))    
     if len(matches)<2:
         sys.exit("Couldn't find matching timestamp pairs between groundtruth and estimated trajectory! Did you choose the correct sequence?")
-
-
+    
+    # 按照匹配对 仅取出x、y、z位置信息
     first_xyz = numpy.matrix([[float(value) for value in first_list[a][0:3]] for a,b in matches]).transpose()
     second_xyz = numpy.matrix([[float(value)*float(args.scale) for value in second_list[b][0:3]] for a,b in matches]).transpose()
     
-    # 匹配误差====
+    # 对匹配后的位置坐标求解误差====
     rot,trans,trans_error = align(second_xyz,first_xyz)
     
     # 相互匹配误差线  
