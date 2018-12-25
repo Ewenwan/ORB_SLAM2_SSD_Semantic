@@ -36,6 +36,8 @@
 
 [orb-slam2地图保存](https://github.com/MRwangmaomao/ORB_SLAM2_SaveMap_Catkin/blob/master/src/Map.cc)
 
+[地图保存2](https://github.com/XinkeAE/Active-ORB-SLAM2/blob/master/src/Map.cc)
+
 > 动态环境处理
 
 []() 
