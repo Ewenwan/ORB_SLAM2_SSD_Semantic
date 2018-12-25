@@ -30,7 +30,7 @@
 
 [Octomap建图参考](https://github.com/Ewenwan/ORB-SLAM-RGBD-with-Octomap)
 
-[Octomap建图参考2](https://github.com/Ewenwan/octomap_mapping)
+[ OctoMap/octomap_mapping 官方建图参考 2D导航等](https://github.com/Ewenwan/octomap_mapping)
 
 [DynamicSemanticMapping 动态场景建图](https://github.com/Ewenwan/DynamicSemanticMapping)
 
