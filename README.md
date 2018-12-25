@@ -32,6 +32,8 @@
 
 [ OctoMap/octomap_mapping 官方建图参考 2D导航等](https://github.com/Ewenwan/octomap_mapping)
 
+[OctomapBuilder.cc](https://github.com/XinkeAE/Active-ORB-SLAM2/blob/master/src/OctomapBuilder.cc)
+
 [DynamicSemanticMapping 动态场景建图](https://github.com/Ewenwan/DynamicSemanticMapping)
 
 [orb-slam2地图保存](https://github.com/MRwangmaomao/ORB_SLAM2_SaveMap_Catkin/blob/master/src/Map.cc)
@@ -145,6 +147,8 @@
     地图大了之后，系统 响应变慢 (地图维护)
     
     地图导航、路径规划
+[Planning.cc](https://github.com/XinkeAE/Active-ORB-SLAM2/blob/master/src/Planning.cc)
+    
     智能导航
      
 
