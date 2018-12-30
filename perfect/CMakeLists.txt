@@ -102,7 +102,7 @@ src/Initializer.cc
 src/Viewer.cc
 src/pointcloudmapping.cc # pcl点云建图线程，已丢弃==
 src/Geometry.cc          # 多视角几何判断动静mask     较慢
-src/Flow.cc              # 光刘判断动静mask           快
+src/Flow.cc              # 光流判断动静mask           快
 src/ObjectDatabase.cc    # 语义目标数据库
 src/Merge2d3d.cc         # 2d框和点云获取3d语义对象 深度信息滤波方法       快
 src/MergeSG.cc           # 2d框和点云获取3d语义对象 点云分割聚类求交集方法  稍慢
