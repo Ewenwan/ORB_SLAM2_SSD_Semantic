@@ -2,7 +2,6 @@
 # coding=utf-8
 # 绘制 相机3D轨迹
 # 使用 python draw_groundtruth_Rt_associate.py
-
 import numpy
 import matplotlib.pyplot as plt
 import mpl_toolkits.mplot3d
@@ -155,9 +154,12 @@ ax.plot(geom_xyz_aligned[0],geom_xyz_aligned[1],geom_xyz_aligned[2],'y',label='o
 #ax.plot(flow_xyz_aligned.transpose(),'g',label='orb-slam2-flow')  # 绿色线条
 #ax.plot(geom_xyz_aligned.transpose(),'y',label='orb-slam2-geom')  # 黄色线条
 
-ax.legend(loc='best')# 显示图例 label=' ' 
+ax.legend(loc='upper center')# 显示图例 label=' '  ‘center right'  best upper center
 ax.set_zlabel('Z/m')  # 坐标轴
 ax.set_ylabel('Y/m')
 ax.set_xlabel('X/m')
 ax.set_title('trajectory')#图标题  
+plt.xlim( -1.6, 0.2 )
+ax.set_zlim( 0.4, 2.6 )
+
 plt.show()
