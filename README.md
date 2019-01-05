@@ -109,7 +109,7 @@
 
 相机定位轨迹对比， tum ft3 walking数据集上
 
-![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/trajectory.png)
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/trag.png)
 
     flow:
     compared_pose_pairs 826 pairs
