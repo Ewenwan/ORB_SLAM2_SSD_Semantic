@@ -156,8 +156,8 @@ ax.plot(geom_xyz_aligned[0],geom_xyz_aligned[1],geom_xyz_aligned[2],'y',label='o
 #ax.plot(geom_xyz_aligned.transpose(),'y',label='orb-slam2-geom')  # 黄色线条
 
 ax.legend(loc='best')# 显示图例 label=' ' 
-ax.set_zlabel('Z')  # 坐标轴
-ax.set_ylabel('Y')
-ax.set_xlabel('X')
+ax.set_zlabel('Z/m')  # 坐标轴
+ax.set_ylabel('Y/m')
+ax.set_xlabel('X/m')
 ax.set_title('trajectory')#图标题  
 plt.show()
