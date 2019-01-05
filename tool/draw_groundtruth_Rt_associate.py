@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # coding=utf-8
 # 绘制 相机3D轨迹
-# 使用 python draw_groundtruth.py
+# 使用 python draw_groundtruth_Rt_associate.py
+
 import numpy
 import matplotlib.pyplot as plt
 import mpl_toolkits.mplot3d
