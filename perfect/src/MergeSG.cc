@@ -1,4 +1,5 @@
-/*2d & 3d 融合算法
+/* This file is part of ORB-SLAM2-SSD-Semantic.
+2d & 3d 融合算法
 点云 多平面分割、聚类
 反向投影获取点晕团的2d框
 和目标检测2d框 匹配
