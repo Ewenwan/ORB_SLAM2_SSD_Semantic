@@ -1,4 +1,4 @@
-/*
+/* This file is part of ORB-SLAM2-SSD-Semantic.
  * 语义点云建图  pointcloudmapping.cc 类实现函数
  */
 
