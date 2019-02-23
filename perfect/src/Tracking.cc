@@ -686,6 +686,7 @@ namespace ORB_SLAM2
                                   timestamp,mpORBextractorLeft,mpORBVocabulary,mK,mDistCoef,mbf,mThDepth);
 
 /*
+// 1. 多视角几何 判断
     LightTrack();// 新添加的函数=======轻量级跟踪=======================
     //cv::Mat mimMask;
     if (!mCurrentFrame.mTcw.empty())
@@ -697,6 +698,9 @@ namespace ORB_SLAM2
         
     }
 */ 
+
+// /*
+// 2. 光流法检测关键点=====
     cv::Mat  homo;// 单应变换=====
     bool  flag;
     float BTh = mflowThreshold;// 光流判断动静点阈值=
@@ -704,10 +708,10 @@ namespace ORB_SLAM2
     flag = TrackHomo(homo);
     if(flag && !homo.empty() )
         mFlow.ComputeMask(mImGray, homo, mimMask, BTh);// 剔除相机运动 根据光流计算 动/静点 mask
-         
     else
         mFlow.ComputeMask(mImGray,mimMask, BTh);// 根据光流计算 动/静点 mask
-
+// ===== */
+		
     // 去除 imMask 内的关键点=====================
     mCurrentFrame = Frame(mImGray,mImDepth,
                           mimMask, // 构造帧的时候，仅仅保留 mask为1的地方的 关键点
@@ -717,6 +721,7 @@ namespace ORB_SLAM2
 // -------------【4】跟踪-------------------
 	    Track();// 跟踪后 就能够得到 位姿 
 
+// 1. 多视角几何 算法部分
 // mGeometry.GeometricModelUpdateDB(mCurrentFrame);// 更新 多视角几何 数据库================
 
 // -------------【5】返回相机运动
