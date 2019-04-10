@@ -122,6 +122,11 @@
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/img/od.PNG)
 
 
+系统整体框架：
+
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/img/system.PNG)
+
+
 相机定位轨迹对比， tum ft3 walking数据集上
 
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/trag.png)
