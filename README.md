@@ -93,18 +93,33 @@
 方案1:
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/mergeDepth.png)
 
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/img/%E6%B7%B1%E5%BA%A6.PNG)
+
+
 方案2:
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/mergeSg.png)
 
+
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/mergeSG_PERSON_CHAIR.png)
+
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/img/cloudSg.PNG)
 
 > 动态点检测
 
 方案1:
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/dynamic_det_geom.png)
 
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/img/muti.PNG)
+
+
 方案2:
 ![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/dynamic_det_flow.png)
+
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/img/%E5%85%89%E6%B5%81.PNG)
+
+数据库：
+
+![](https://github.com/Ewenwan/ORB_SLAM2_SSD_Semantic/blob/master/img/od.PNG)
 
 
 相机定位轨迹对比， tum ft3 walking数据集上
