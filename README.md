@@ -42,7 +42,6 @@
 
 > 动态环境处理
 
-[]() 
 [dynslam 光流运动  语义分割](http://www.cvlibs.net/publications/Barsan2018ICRA.pdf) 
 
 [DynaSLAM 多视角几何 语义分割](https://arxiv.org/pdf/1806.05620.pdf) 
@@ -61,7 +60,9 @@
 [VSO: Visual Semantic Odometry](https://demuc.de/papers/lianos2018vso.pdf) 
 []() 
 
+# 感谢支持
 
+![](https://github.com/Ewenwan/EwenWan/blob/master/zf.jpg)
 
 # 改进点
     1. 考虑动态环境(语义信息、多视角几何、光流、运动一致性检测)
