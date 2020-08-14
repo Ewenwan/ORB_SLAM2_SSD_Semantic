@@ -40,6 +40,8 @@
 
 [地图保存2](https://github.com/XinkeAE/Active-ORB-SLAM2/blob/master/src/Map.cc)
 
+[[ORB-SLAM2] ORB-SLAM中的ORB特征（提取）](https://zhuanlan.zhihu.com/p/61738607) 
+
 > 动态环境处理
 
 [dynslam 光流运动  语义分割](http://www.cvlibs.net/publications/Barsan2018ICRA.pdf) 
@@ -58,7 +60,7 @@
 [Probabilistic Data Association for Semantic SLAM](https://www.cis.upenn.edu/~kostas/mypub.dir/bowman17icra.pdf) 
 
 [VSO: Visual Semantic Odometry](https://demuc.de/papers/lianos2018vso.pdf) 
-[]() 
+
 
 # 感谢支持
 
